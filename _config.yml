@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the navbar)
-name: latif atci blog
+name: "@latifatci"
 
 # Your site's title (e.g., Ben's Awesome Site, The GitHub Blog, etc.), used as part of the title tag like Home | Ben's Awesome Site.
 title: Latif Atci Blog
@@ -42,13 +42,13 @@ permalink: /:year/:month/:day/:title/
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  email: mkie0125@gmail.com
+  email: latif.800@gmail.com
   facebook:
-  github: andrewhwanpark/brutalist-blog
-  instagram: andrewhwanpark
-  linkedin: andrewhwanpark
+  github: latifatcii
+  instagram: atcilatif
+  linkedin: latifatci
   rss: # just type anything here for a working RSS icon
-  twitter: andrewhwanpark
+  twitter: latifatci
 
 plugins:
   - jekyll-seo-tag
