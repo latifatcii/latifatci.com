@@ -1,118 +1,99 @@
-# Hyde
+# brutalist-blog
 
-Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+## Introduction
 
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
+![brutalist-blog dark mode homepage](https://user-images.githubusercontent.com/13270895/131266947-65f2ae83-7d9e-48d7-8cd6-05a1d59df0ab.png)
+![brutalist-blog light mode homepage](https://user-images.githubusercontent.com/13270895/131266950-3a0e0eff-0b15-4f60-ba22-231bcd78fb0c.png)
+![brutalist-blog mobile homepages](https://user-images.githubusercontent.com/13270895/131266952-e245630a-9874-4bde-952c-3c63ebd745e0.png)
 
+brutalist-blog is a no frills, fully-responsive, hyper-minimalistic dark/light theme. The theme is heavily inspired by Mark Otto's personal site: https://markdotto.com/
 
-## Contents
+Demo: https://andrewhwanpark.github.io/brutalist-blog/
 
-- [Usage](#usage)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Sticky sidebar content](#sticky-sidebar-content)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
+My personal site that uses the same theme: https://andrewhwanpark.github.io/
 
+#### Features
+
+- Automatically changes from dark/light modes depending on the OS settings.
+- Easy integration with Google Analytics.
+- Generates XML sitemap and RSS Atom feed.
+- jekyll-seo-tag to add metadata tags for search engines and social networks to better index and display your site's content.
+- Full markdown support: code blocks and tables are automatically bootstrap components.
+
+![code blocks](https://user-images.githubusercontent.com/13270895/126393675-dacc65f1-7dd2-4651-ae2b-0e77eda7cd11.png)
+
+![tables](https://user-images.githubusercontent.com/13270895/126393680-7b7fae57-abd0-4843-a9a1-c4f334b5eaa4.png)
+
+## Installation
+
+Clone this repo:
+
+    $ git clone https://github.com/andrewhwanpark/brutalist-blog.git
+
+If you haven't already, install bundler:
+
+    $ gem install bundler
+
+And then execute:
+
+    $ bundle install
+
+Serve the site:
+
+    $ bundle exec jekyll serve
+
+# Installation with Github Pages
+
+After cloning the repo, checkout to the gh-pages branch.
+
+    $ git checkout gh-pages && git pull
+
+In the directory:
+
+    $ bundle install
+
+For local development:
+
+    $ bundle exec jekyll serve
+
+After tweaking with it, you can publish the site. Under your repository name, click Settings.
+
+![tutorial](https://docs.github.com/assets/images/help/repository/repo-actions-settings.png)
+
+In the left sidebar, click Pages.
+
+![tutorial 2](https://docs.github.com/assets/images/help/pages/pages-tab.png)
+
+To see your published site, under "GitHub Pages", click your site's URL.
+
+![tutorial 3](https://docs.github.com/assets/images/help/pages/click-pages-url-to-preview.png)
+
+For a more detailed guide, visit this guide by Github: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll
 
 ## Usage
 
-Hyde is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+### First things first: \_config.yml
 
+First, you should change data in \_config.yml to the appropriate information such as your social links for the footer icons, avatar for navbar logo, title and name of the site, and more crucial information.
 
-## Options
+### Adding content
 
-Hyde includes some customizable options, typically applied via classes on the `<body>` element.
+In order to add permanent pages, add in similar fashion to about.md and portfolio.md and add apppropriate data to \_data/navigation.yml.
 
+In order to add blog posts, add in similar fashion to \_posts/2021-07-16-this-post-demonstrates-post-content-styles.md.
 
-### Sidebar menu
+### Custom style changes
 
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
+If you wish to add custom styling through SCSS or CSS, you can add or edit \_sass/main.scss.
 
-```
----
-layout: page
-title: About
----
-```
+### Custom domains with Github Pages
 
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
+Follow this simple guide: https://medium.com/@xiang_zhou/how-to-add-custom-domain-to-your-jekyll-blog-provided-that-you-built-your-site-using-github-6e1c8bf20afe
 
+## Contributing
 
-### Sticky sidebar content
-
-By default Hyde ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disable this by removing the `.sidebar-sticky` class from the sidebar's `.container`. Sidebar content will then normally flow from top to bottom.
-
-```html
-<!-- Default sidebar -->
-<div class="sidebar">
-  <div class="container sidebar-sticky">
-    ...
-  </div>
-</div>
-
-<!-- Modified sidebar -->
-<div class="sidebar">
-  <div class="container">
-    ...
-  </div>
-</div>
-```
-
-
-### Themes
-
-Hyde ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
-
-![Hyde in red](https://f.cloud.github.com/assets/98681/1831229/42b0b354-7384-11e3-8462-31b8df193fe5.png)
-
-There are eight themes available at this time.
-
-![Hyde theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
-
-To use a theme, add anyone of the available theme classes to the `<body>` element in the `default.html` layout, like so:
-
-```html
-<body class="theme-base-08">
-  ...
-</body>
-```
-
-To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/hyde/blob/master/public/css/hyde.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
-
-### Reverse layout
-
-![Hyde with reverse layout](https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png)
-
-Hyde's page orientation can be reversed with a single class.
-
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
-
-
-## Development
-
-Hyde has two branches, but only one is used for active development.
-
-- `master` for development.  **All pull requests should be submitted against `master`.**
-- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
-
-
-## Author
-
-**Mark Otto**
-- <https://github.com/mdo>
-- <https://twitter.com/mdo>
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/andrewhwanpark/brutalist-blog.
 
 ## License
 
-Open sourced under the [MIT license](LICENSE.md).
-
-<3
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
