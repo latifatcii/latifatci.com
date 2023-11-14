@@ -2,5 +2,5 @@
   link: /
 - name: About
   link: /about/
-- name: Bookmarks
-  link: /bookmarks/
+#- name: Bookmarks
+ # link: /bookmarks/

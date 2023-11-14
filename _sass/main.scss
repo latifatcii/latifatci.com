@@ -29,9 +29,17 @@ img {
 
 .archive-item {
   float: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
+  /* Separator line styles */
+  .archive-item:not(:last-child) {
+    border-bottom: 1px solid #ddd; /* Add a 1px solid line between posts */
+    padding-bottom: 10px; /* Add some spacing between the title and the line */
+    margin-bottom: 10px; /* Add some spacing between posts */
+  }
+
+  
 .footer-container {
   text-align: center;
 }

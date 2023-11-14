@@ -5,14 +5,34 @@ layout: default
 <div class="archive">
   {% for post in site.posts %} {% assign currDate = post.date | date: "%Y" %} {%
   if currDate != date %}
-  <h1 class="archive-year">{{ currDate }}</h1>
   {% assign date = currDate %} {% endif %}
 <div class="archive-title">
-  <a href="{{ post.url | relative_url }}" class="archive-title fs-4">{{ post.title }}</a>
+  <a href="{{ post.url | relative_url }}" class="archive-title fs-6">{{ post.title }}</a>
   <div class="archive-item">
-    <span class="post-date archive-date fs-6">{{ post.date | date: "%d %B" }}</span>
+    <span class="post-date archive-date fs-6">{{ post.date | date: "%b %d, %Y" }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
   </div>
 </div>
 
   {% endfor %}
 </div>
+
+<style>
+  /* Add this style block in the head of your HTML document or in your CSS file */
+
+  /* Default link styles */
+  .archive-title {
+    color: #212529; /* Set the default text color */
+    transition: color 0.3s; /* Add a smooth transition for the text color */
+  }
+
+  /* Hover styles */
+  .archive-title:hover {
+    color: rgba(112, 106, 106, 0.59); /* Set the text color on hover */
+  }
+
+  .archive-title:not(:last-child) {
+    border-bottom: 1px solid #ddd; /* Add a 1px solid line between archive items */
+    margin-bottom: 1rem; /* Add some spacing between archive items */
+  }
+  
+</style>
