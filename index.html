@@ -2,6 +2,16 @@
 layout: default
 ---
 
+<!-- Include jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    // Remove border from the last .archive-item
+    $('.archive-item:last').css('border-bottom', 'none');
+  });
+</script>
+
 <div class="archive">
   {% for post in site.posts %} {% assign currDate = post.date | date: "%Y" %} {%
   if currDate != date %}
