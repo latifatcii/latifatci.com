@@ -31,9 +31,9 @@
     -%}
   </head>
   <body class="d-flex flex-column h-100">
-    <div class="container">
+    <div class="container d-flex flex-column align-items-center">
       {% include navigation.html %}
-      <div class="body">{{ content }}</div>
+      <div class="body text-left" style="max-width: 600px;">{{ content }}</div>
     </div>
     {% include footer.html %}
     <!-- JS for Bootstrap -->

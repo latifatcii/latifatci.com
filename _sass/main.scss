@@ -14,7 +14,6 @@ img {
 
 .navbar {
   margin-bottom: 2rem;
-  border-bottom: 0.125rem solid hsl(0, 0%, 30%);
 }
 
 .archive-year {
@@ -23,22 +22,12 @@ img {
 }
 
 .archive-date {
-  float: left;
   color: #8e8b8ba1;
 }
 
 .archive-item {
-  float: center;
   margin-bottom: 3rem;
 }
-
-  /* Separator line styles */
-  .archive-item:not(:last-child) {
-    border-bottom: 1px solid #ddd; /* Add a 1px solid line between posts */
-    padding-bottom: 10px; /* Add some spacing between the title and the line */
-    margin-bottom: 10px; /* Add some spacing between posts */
-  }
-
   
 .footer-container {
   text-align: center;
@@ -62,7 +51,19 @@ img {
 }
 
 .archive-title {
-  color: #212529;
+  text-decoration: none;
+  color: #212529; /* Set the default text color */
+  transition: color 0.3s; /* Add a smooth transition for the text color */
+}
+
+/* Hover styles */
+.archive-title:hover {
+  color: rgba(112, 106, 106, 0.59); /* Set the text color on hover */
+}
+
+.archive-title:not(:last-child) {
+  border-bottom: 1px solid #ddd; /* Add a 1px solid line between archive items */
+  margin-bottom: 1rem; /* Add some spacing between archive items */
 }
 
 .highlight {
@@ -88,6 +89,10 @@ pre.highlight {
     color: #e1e1e1;
   }
 
+  .navbar {
+    margin-bottom: 2rem;
+  }
+
   .footer-icon-links:hover,
   .footer-icon-links:focus {
     text-decoration: none;
@@ -95,7 +100,19 @@ pre.highlight {
   }
 
   .archive-title {
-    color: #e1e1e1;
+    text-decoration: none;
+    color: #ffffff; /* Set the default text color */
+    transition: color 0.3s; /* Add a smooth transition for the text color */
+  }
+
+  /* Hover styles */
+  .archive-title:hover {
+    color: rgba(112, 106, 106, 0.59); /* Set the text color on hover */
+  }
+
+  .archive-title:not(:last-child) {
+    border-bottom: 1px solid rgba(112, 106, 106, 0.59); /* Add a 1px solid line between archive items */
+    margin-bottom: 1rem; /* Add some spacing between archive items */
   }
 
   .light-avatar {

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modularize an iOS Project and Add Module Based Executable Apps
+title: Modularize an iOS Project and Add Module Based Executable Apps Modularize an iOS Project and Add Module Based Executable Apps
 ---
 
 A **monolith** project is the starter solution when building a new project. Mostly we won't need anything else when we have small-sized projects. But every time, adding a new feature to the codebase increases complexity and build time.
