@@ -3339,17 +3339,34 @@ textarea.form-control-lg{
 .tab-content>.active{
     display:block
 }
+
+.sticky-sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh; /* Adjust the height as needed */
+    overflow-y: auto; /* Add scroll if content is too long */
+    padding-right: 20px; /* Add padding as needed */
+    width: 250px
+  }
+
+  /* Adjust styles for better appearance */
+  .sticky-sidebar p {
+    margin-bottom: 20px;
+  }
+
+  .flex-grow-1 {
+    flex-grow: 1;
+  }
+
 .navbar{
     position:relative;
     display:flex;
     flex-wrap:wrap;
-    align-items:left;
+    align-items:center;
     justify-content:space-between;
-    padding-top:.5rem;
-    padding-bottom:.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
+    padding-top:1rem;
+    padding-bottom:1rem;
 }
 .navbar>.container,.navbar>.container-fluid,.navbar>.container-lg,.navbar>.container-md,.navbar>.container-sm,.navbar>.container-xl,.navbar>.container-xxl{
     display:flex;
