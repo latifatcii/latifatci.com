@@ -470,6 +470,42 @@ progress{
     margin-right:auto;
     margin-left:auto
 }
+
+@media (min-width: 64em) {
+    .sticky {
+        clear:both;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 2em
+    }
+
+    .sticky::after {
+        clear: both;
+        content: "";
+        display: table
+    }
+
+    .sticky>* {
+        display: block
+    }
+}
+
+@media (max-width: 992px) {
+    .sticky-sidebar {
+      display: none;
+    }
+
+      /* Add styles for the new component below the navigation */
+  .sidebar {
+    /* Add your styles for the new component here */
+    padding: 10px;
+    text-align: center;
+    /* You can customize the styles based on your design */
+  }
+}
+
+
+
 @media (min-width:576px){
     .container,.container-sm{
         max-width:540px
@@ -480,11 +516,93 @@ progress{
         max-width:720px
     }
 }
+.author__avatar img {
+    max-width: 100%;
+    border-radius: 5%
+}
+
+.author__avatar {
+    display: table-cell;
+    vertical-align: top;
+    width: 36px;
+    height: 36px;
+}
+
+.author__content {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 15px;
+    padding-right: 25px;
+    line-height: 1;
+    text-align: left;
+}
+
+@media (min-width: 64em) {
+    .author__content {
+        display:block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0
+    }
+}
+
+.author__name {
+    margin: 0;
+    display: inline-block
+}
+
+@media (min-width: 64em) {
+    .author__name {
+        margin-top:10px;
+        margin-bottom: 10px
+    }
+}
+
+.author__username {
+    margin: 0;
+    display: none
+}
+
+@media (min-width: 64em) {
+    .author__username {
+        display:block
+    }
+}
+
+.sidebar .author__name {
+    font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+    font-size: 1em
+}
+
+.sidebar .author__username {
+    font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+    font-size: .75em;
+    font-weight: lighter;
+    color: #7a8288
+}
+
+.author__bio {
+    margin: 0
+}
+
+@media (min-width: 64em) {
+    .author__bio {
+        margin-top:10px;
+        margin-bottom: 20px
+    }
+}
+
 @media (min-width:992px){
     .container,.container-lg,.container-md,.container-sm{
         max-width:960px
     }
+
+    .sidebar {
+        /* Add your styles for the new component here */
+        display: none;
+    }   
 }
+
 @media (min-width:1200px){
     .container,.container-lg,.container-md,.container-sm,.container-xl{
         max-width:1140px
