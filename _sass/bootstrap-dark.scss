@@ -490,40 +490,20 @@ progress{
     }
 }
 
-@media (max-width: 992px) {
-    .sticky-sidebar {
-      display: none;
-    }
 
-      /* Add styles for the new component below the navigation */
-  .sidebar {
-    /* Add your styles for the new component here */
-    padding: 10px;
-    text-align: center;
-    /* You can customize the styles based on your design */
-  }
-}
-
-
-
-@media (min-width:576px){
-    .container,.container-sm{
-        max-width:540px
-    }
-}
-@media (min-width:768px){
-    .container,.container-md,.container-sm{
-        max-width:720px
-    }
-}
 .author__avatar img {
     max-width: 100%;
-    border-radius: 5%
+    border-radius: 50%
+}
+
+.author__avatar_img img {
+    max-width: 100%;
+    border-radius: 50%
 }
 
 .author__avatar {
     display: table-cell;
-    vertical-align: top;
+    vertical-align: middle;
     width: 36px;
     height: 36px;
 }
@@ -537,8 +517,22 @@ progress{
     text-align: left;
 }
 
+.author__content__forleft {
+    display: table-cell;
+    vertical-align: top;
+    line-height: 1;
+    text-align: left;
+}
+
 @media (min-width: 64em) {
     .author__content {
+        display:block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .author__content__forleft {
         display:block;
         width: 100%;
         padding-left: 0;
@@ -548,14 +542,8 @@ progress{
 
 .author__name {
     margin: 0;
+    margin-bottom: 3px;
     display: inline-block
-}
-
-@media (min-width: 64em) {
-    .author__name {
-        margin-top:10px;
-        margin-bottom: 10px
-    }
 }
 
 .author__username {
@@ -574,6 +562,11 @@ progress{
     font-size: 1em
 }
 
+.sticky-sidebar .author__name {
+    font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+    font-size:large
+}
+
 .sidebar .author__username {
     font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
     font-size: .75em;
@@ -581,36 +574,24 @@ progress{
     color: #7a8288
 }
 
+.sticky-sidebar .author__bio {
+    font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+    font-size:small
+}
+
 .author__bio {
-    margin: 0
-}
-
-@media (min-width: 64em) {
-    .author__bio {
-        margin-top:10px;
-        margin-bottom: 20px
-    }
-}
-
-@media (min-width:992px){
-    .container,.container-lg,.container-md,.container-sm{
-        max-width:960px
-    }
-
-    .sidebar {
-        /* Add your styles for the new component here */
-        display: none;
-    }   
+    margin: 0;
+    margin-bottom: 5px;
 }
 
 @media (min-width:1200px){
     .container,.container-lg,.container-md,.container-sm,.container-xl{
-        max-width:1140px
+        max-width:1200px
     }
 }
 @media (min-width:1400px){
     .container,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl{
-        max-width:1320px
+        max-width:1400px
     }
 }
 .row{
@@ -3458,19 +3439,29 @@ textarea.form-control-lg{
     display:block
 }
 
+.content-margin {
+    margin-left: 210px;
+}
+
+@media (max-width:576px){
+    .content-margin {
+        margin-left: 0px;
+    }
+}
+
 .sticky-sidebar {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    margin-right: 20px;
     height: 100vh; /* Adjust the height as needed */
     overflow-y: auto; /* Add scroll if content is too long */
     padding-right: 20px; /* Add padding as needed */
-    width: 250px
   }
 
   /* Adjust styles for better appearance */
   .sticky-sidebar p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .flex-grow-1 {
