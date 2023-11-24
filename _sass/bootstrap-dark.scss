@@ -465,8 +465,6 @@ progress{
 }
 .container,.container-fluid,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl{
     width:100%;
-    padding-right:var(--bs-gutter-x,.75rem);
-    padding-left:var(--bs-gutter-x,.75rem);
     margin-right:auto;
     margin-left:auto
 }
@@ -581,7 +579,7 @@ progress{
 
 .author__bio {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 @media (min-width:1200px){
@@ -3443,9 +3441,33 @@ textarea.form-control-lg{
     margin-left: 210px;
 }
 
+.archive {
+    width: 50%;
+}
+
+.body-margin-left {
+    margin-left: 150px;
+}
+
+.post-with-margin {
+    width: 70%;
+}
+
 @media (max-width:576px){
     .content-margin {
         margin-left: 0px;
+    }
+    
+    .archive {
+        width: 100%;
+    }
+
+    .body-margin-left {
+        margin-left: 1em;
+    }
+
+    .post-with-margin {
+        width: 100%;
     }
 }
 

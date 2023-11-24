@@ -18,8 +18,11 @@ layout: default
   {% assign date = currDate %} {% endif %}
 <div class="archive-title">
   <a href="{{ post.url | relative_url }}" class="archive-title fs-6">{{ post.title }}</a>
+  <div class="archive-desc">
+    {{ post.desc }}
+  </div>
   <div class="archive-item">
-    <span class="post-date archive-date fs-6">{{ post.date | date: "%b %d, %Y" }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
+    <span class="post-date archive-date fs-6">{{ post.date | date: "%b %d, %Y" }}</span>
   </div>
 </div>
 

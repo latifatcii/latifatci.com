@@ -1,15 +1,12 @@
 ---
 layout: page
-title: About
+title: Hi, I'm Latif 🙋🏽‍♂️
 permalink: /about/
 ---
 
-Hello I am Latif!
+I am an iOS Developer @trendyol with 3 years of experience. In this blog you can find anything about my life. 
 
-### More Information
+**Contact me**
 
-More information about me will be here soon!
-
-### Contact me
-
-[latif.800@gmail.com](mailto:email@domain.com)
+You can reach me out via
+<a href="https://twitter.com/latifatci" class="about-reach-hyperlink">X</a>

@@ -2,7 +2,7 @@
 <html lang="en-us" class="h-100">
   <head>
     <title>
-      {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{
+      {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} {{
       site.description }}
     </title>
     <meta charset="utf-8" />
@@ -30,17 +30,17 @@
     site.google_analytics -%} {%- include google-analytics.html -%} {%- endif
     -%}
   </head>
-  <body class="d-flex flex-column h-100" style="margin-top: 10px; margin-left: 25px;">
+  <body class="d-flex flex-column h-100 body-margin-left" style="margin-top: 10px; margin-right: 1em;">
     <div class="container mw-100">
       {% include navigation.html %}
-      <div class="sidebar sticky d-block d-sm-none" style="margin-bottom: 15px;">
+      <div class="sidebar sticky d-block d-sm-none" style="margin-bottom: 40px;">
         <div class="author__avatar">
           <img src="https://pbs.twimg.com/profile_images/1711785658111422464/bApFsYoq_400x400.jpg" alt="Svein Halvor Halvorsen">
         </div>
         <div class="author__content">
           <h3 class="author__name">Latif Atci</h3>
           <h4 class="author__username">latifatci</h4>
-          <p class="author__bio">iOSs engineer with a love for beautiful code and user interfaces.</p>
+          <p class="author__bio">Passionate about writing, podcasting, gaming and coding.</p>
           {% include footer.html %}
       </div>
       </div>
@@ -52,7 +52,7 @@
           </div>
           <div class="author__content__forleft">
             <h3 class="author__name">Latif Atci</h3>
-            <p class="author__bio">iOS engineer with a love for beautiful code and user interfaces.</p>
+            <p class="author__bio">Passionate about writing, podcasting, gaming and coding.</p>
         </div>
         {% include footer.html %}
           </div>
