@@ -13,7 +13,7 @@ Moving to the Jekyll was easy even though I have zero frontend-backend experienc
 I have been inspired by several blogs. <a href="https://jvns.ca" class="about-reach-hyperlink">Julia Evans</a>, <a href="https://sveinhal.github.io" class="about-reach-hyperlink">sveinhal</a>, <a href="https://ademilter.com" class="about-reach-hyperlink">Adem Ilter</a>. But mostly from sveinhal. I really loved its design and wanted a similar blog. Firstly, I tried to understand Jekyll template that I use. Tried to debug it and learn which class, file represents where in the design. Html and CSS were unfamiliar to me, but I have come a long way with the help of ChatGPT and my googling skills. There were still bugs, mostly about the responsiveness of the website. At that time, I asked for assistance from my lovely and genius friend <a href="https://twitter.com/beyzance2" class="about-reach-hyperlink">Beyza Ince</a>. She solved most of the problems with her frontend skills. With her help, I have understood the Bootstrap. I was using it with bad practices and without knowing its capabilities. After Beyza's help, I almost achieved what I wished for, with only a few minor bugs and todos left. I have completed the rest quickly.
 
 **What I have learned with this challenge was**
-- How static web pages (such as Jekyll) work. And it is easy to implement.
+- How static site generators (such as Jekyll) work. And it is easy to implement.
 - Html - CSS basics
 - ChatGPT is really helpful, especially for the simple needs.
 - Even though I am good at googling, learning basic concepts and capabilities of the frameworks and languages I use to complete everything faster is essential.
